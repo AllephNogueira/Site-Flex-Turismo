@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+/* Cuidar das imagens para nao quebrar o layout */
+div img{
+    display: block; /* 1 Faz com que a imagem se comporte como um bloco */
+    width: 100%; /* 2 Faz com que a imagem ocupe toda a largura do container */
+}
+
+.flex-container{
+    /* Aqui deixamos nosso container flexivel e com outra cara */
+    display: flex;
+    max-width: 62rem;
+    margin: auto; /* 1 Alinhamento ao centro */
+    width: 100%; /* 2 Largura total ocupar toda a tela */
+
+}
+
+header{
+    background-color: #122A57;
+    height: 100px; /* 2 Altura do header */
+    display: flex; /* 3 Flex */
+    align-items: center; /* 4 Alinhamento vertical */
+    color: white; /* 5 Cor do texto */
+    margin-bottom: 3%;
+}
+
+header .list-items{
+    display: flex; /* 5 Flex */
+    width: 100%; /* 10 Largura total ocupar toda a tela */
+    max-width: 16.5rem; /* 11 Largura do menu */
+    justify-content: space-between; /* 12 Colocando todos os itens no final da tela e separando eles*/
+    align-items: center; /* 13 Alinhamento vertical do menu superior */
+
+}
+
+.list-items li a {
+    text-decoration: none; /* 8 Retirando o sublinhado */
+    color: white; /* 9 Cor do texto */
+}
+
+header .menu{
+    justify-content: space-between; 
+    gap: 50%; /* 7 Espaçamento entre os itens */
+}
+
+.tamanho-fonte-botoes {
+    font-size: 2rem; /* 1 Tamanho da fonte */
+}
+
+.apresentacao{
+    /* 
+    
+    O vh (viewport height) é uma unidade de medida no CSS que representa uma porcentagem da altura total da janela de visualização (viewport). Por exemplo:
+    - 100vh significa que o elemento ocupará 100% da altura da janela do navegador.
+    - 50vh ocupará metade da altura da janela.
+    É muito útil para garantir que um elemento tenha uma altura dinâmica, independente do tamanho da tela do usuário. Por exemplo, se quiser fazer um banner ou uma seção inteira ocupar toda a altura visível do navegador, pode usar height: 100vh;.
+    Quer testar isso em algum layout específico
+
+
+    */
+    height: 50vh; /* 1 Altura do container */
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.apresentacao .texto-apresentacao{
+    min-height: 18.5rem; /* 1 Altura minima do container */
+}
+
+.apresentacao .texto-apresentacao h1{
+    color: #122A57; /* 1 Cor do texto */
+    font-size: 3rem;
+    margin-bottom: 0.6rem;
+}
+
+.texto-apresentacao a{
+    background-color: #122A57; /* 1 Cor do botão */
+    color: white; /* 2 Cor do texto */
+    text-align: center; /* 3 Alinhamento do texto */
+    border-radius: 2rem; /* 3 Bordas arredondadas */
+    width: 13.5rem ; /* 3 Largura do botão */
+    display: block; /* 4 Display block - Diz para o botao se comportar como um bloco, e nao como um span */
+    /* span = inline*/
+    /* bloco = ocupa toda a largura do container */
+    height: 3.10rem; /* 4 Altura do botão */;
+    text-decoration: none; /* 6 Retirando o sublinhado */
+    /* texto vir para o centro do botao */
+    line-height: 3rem;
+    /* da uma margem superior ao botao */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Quem somos agora */
+
+
+#quem-somos{
+    /* Vamos inverter agora o lado, colocando imagem do outro lado */
+    flex-direction: row-reverse; /* 1 Direção do flex */
+    align-items: center;
+    justify-content: space-between;
+
+ 
+    
+    
+}
+
+#quem-somos h2{
+    font-size: 2rem;
+    color: #122A57; /* 1 Cor do texto */
+    display: flex;
+    margin-bottom: 1.2rem; /* 2 Margem inferior */
+    
+
+}
+
+#quem-somos h2::before{
+    content: ""; /* 1 Adicionando um icone antes do texto */
+    height: 3.2rem; /* 2 Altura do icone */
+    width: 0.3rem; /* 3 Largura do icone */
+    margin-right: 0.3rem; /* 4 Margem direita do icone */
+    background-color: #122A57; /* 5 Cor do icone */
+    position: relative; /* 6 Posicionamento relativo */
+
+}
+
+#quem-somos p{
+    margin-bottom: 0.6rem; /* 1 Margem inferior */
+    width: 90%; /* 2 Largura do paragrafo */
+}
+
+
+#quem-somos img{
+    min-width: 40rem; /* 1 Largura minima da imagem */
+    
+}
+
+
+
+/* Trabalhando com serviços agora */
+
+.container-externo{
+    background-color: #122A57;
+    width: 100%; /* 1 Largura total ocupar toda a tela */
+}
+
+#servicos{
+    flex-direction: column; /* 1 Direção do flex */
+    padding-top: 50px; /* 2 Padding superior */
+    padding-bottom: 100px; /* 3 Padding inferior */   
+
+}
+
+#servicos h2{
+    color: white; /* 1 Cor do texto */
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+.list-servicos{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.list-servicos .item-servicos{
+    text-align: center;
+}
+
+.item-servicos a{
+    width: 12.5rem; /* 1 Largura do botao */
+    height: 3.10rem; /* 2 Altura do botão */
+    background-color: white; /* 1 Cor do botão */
+    border-radius: 2rem;
+    text-align: center; /* 3 Alinhamento do texto */
+    margin-top: 2rem; /* 4 Margem superior */
+    margin-bottom: 2rem; /* 5 Margem inferior */
+    line-height: 3rem; /* 4 Alinhamento do texto */
+    padding: 5px 10px;
+    color: #122A57; /* 5 Cor do texto do link*/
+    text-decoration: none; /* 6 Retirando o sublinhado */
+    font-size: 1.0rem; /* 7 Tamanho da fonte */
+    font-weight: 700; /* 8 Peso da fonte */
+    display: block; /* 8 Display block - Diz para o botao se comportar como um bloco, e nao como um span */
+
+
+}
+
+.item-servicos p{
+    margin-top: 2rem;
+    color: white;
+    font-weight: 700; /* 1 Peso da fonte */
+    font-size: 1.2rem; /* 2 Tamanho da fonte */
+
+}
+
+.item-servicos img{
+    width: 80%; /* 1 Largura da imagem */
+    margin: auto; /* 2 Alinhamento ao centro */
+}
+
+
+/* Trabalhando com a sessão de planos agora */
+
+#planos{
+    /* Colocando em coluna, aumentando o espaço superior e inferior */
+    flex-direction: column; /* 1 Direção do flex */
+    padding-top: 50px; /* 2 Padding superior */
+    padding-bottom: 100px; /* 3 Padding inferior */
+}
+
+#planos h2{
+    /* 1 Cor do texto, tamanho da fonte e margem para baixo */
+    color: #122A57; /* 1 Cor do texto */
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+.list-planos{
+    display: flex; /* 1 Flex */
+    align-items: flex-end;  /* Alinhamento puxando de baixo para cima */
+    justify-content: space-between; /* 2 Justificando o espaço entre os itens */
+    text-align: center;
+
+}
+
+
+.info-planos h3 {
+    position: relative; /* Necessário para o posicionamento absoluto da linha */
+    text-align: center;
+    margin-bottom: 1.2rem; /* 1 Margem inferior */
+}
+
+.info-planos h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Ajuste para posicionar abaixo do texto */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Ajuste conforme necessário */
+    height: 2px;
+    background-color: black;
+}
+
+.info-planos  {
+    border: #122A57 solid 0.3rem; /* 1 Borda do texto */
+    padding-top: 1.8rem;
+    padding-left: 1.8rem; /* 2 Padding superior */
+    padding-right: 1.8rem; /* 3 Padding inferior */
+
+}
+
+.info-planos  ul {
+    font-size: 1.2rem; /* 1 Tamanho da fonte */
+    color: #122A57; /* 2 Cor do texto */
+    padding: 0; /* Remove espaçamento interno */
+    margin: 0; /* Remove espaçamento externo */
+    list-style-position: inside; /* Mantém os marcadores dentro da lista */
+
+
+}
+
+.info-planos  ul li{
+    color: black;
+    text-align: left;
+    list-style-type: square; /* 2 Estilo da lista */
+}
+
+.info-planos a{
+    background-color: #122A57; /* 1 Cor do botão */
+    color: white; /* 2 Cor do texto */
+    text-align: center; /* 3 Alinhamento do texto */
+    border-radius: 2rem; /* 3 Bordas arredondadas */
+    width: 13.5rem ; /* 3 Largura do botão */
+    display: block; /* 4 Display block - Diz para o botao se comportar como um bloco, e nao como um span */
+    height: 3.10rem; /* 4 Altura do botão */;
+    text-decoration: none; /* 6 Retirando o sublinhado */
+    line-height: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* 7 Sombra do botão */
+}
+
+/* Trabalhando com a sessão de contato agora */
+#contato{
+    /* Colocando em coluna, aumentando o espaço superior e inferior */
+    flex-direction: column; /* 1 Direção do flex */
+    align-items: flex-end;
+    text-align: center;
+    width: 100%; /* 2 Largura total ocupar toda a tela */
+    background-color: #122A57;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+}
+
